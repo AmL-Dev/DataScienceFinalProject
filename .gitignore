@@ -5,6 +5,7 @@
 
 #Skip data
 data/
+.ipynb_checkpoints
 
 #Data files
 *.csv
