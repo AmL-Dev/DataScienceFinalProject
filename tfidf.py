@@ -4,22 +4,20 @@ from mrjob.step import MRStep
 import pandas as pd #using pandas to find the number of books in the corpus
 import spacy #using the spacy library to remove stop words 
 from nltk.stem import PorterStemmer #reduces the word to the root node
-from nltk.stem import SnowballStemmer
+from nltk.stem import SnowballStemmer #using snowball to reduce the word to the root node 
+import string 
 import math
 import re 
-import string 
 
-threshold = 0.00000001
-
-#Finding the total number of books in the corpus:
-test = pd.read_csv('data/books_testset.csv')
+#finding the total number of books in the corpus (needed for the tfidf calculations)
+test = pd.read_csv('data/books_metadata.csv')
 M = len(test)
 
-#loading the english language small model of spacy
+#used to filter out stopwords from the description (english language small model of spacy)
 en = spacy.load('en_core_web_sm')
 stopwords = en.Defaults.stop_words
 
-#string of special characters
+#string of special characters, used to remove special characters from the description
 special_char = r'[' + string.punctuation + ']'
 
 #standardize words that share the same suffix and that normally are derivations of gramatically similar words
@@ -27,8 +25,11 @@ special_char = r'[' + string.punctuation + ']'
 porter = PorterStemmer()
 snowball = SnowballStemmer(language='english')
 
-#searches for groups that have alphanumerics or ' that are 1 or longer. I.e. breaks a line into words.
+#used to search for groups that have alphanumerics or ' that are 1 or longer. I.e. breaks a line into words.
 WORD_RE = re.compile(r"[\w']+") 
+
+#only yield the words with a tfidf score above the threshold, in order to reduce the number of computations
+threshold = 0
 
 
 class MR_TFIDF(MRJob): #class that inherits from MRJob 
@@ -151,9 +152,5 @@ class MR_TFIDF(MRJob): #class that inherits from MRJob
 
     
 
-
-
 if __name__ == '__main__':
     MR_TFIDF.run()
-
-
