@@ -48,7 +48,6 @@ We used the [Goodreads Datasets](https://sites.google.com/eng.ucsd.edu/ucsdbookg
 To prevent having to run the data preprocessing step, we have exported our preprocessed data set:
 
 - Dataset of books with all of their characteristics: [books_metadata.csv](https://drive.google.com/file/d/18bopeQvWYmAUH5tga0X7dnM-HTneqVrU/view?usp=sharing)
-
 - Dataset of all user ratings for the book they read: [user_book_ratings.csv](https://drive.google.com/file/d/1813UCk3913FR0TgGh3yJqXtOawaW54Gv/view?usp=sharing)
 
 #### **Optional**
