@@ -27,7 +27,7 @@ This project was build using the following technologies:
 - [mrjob](https://mrjob.readthedocs.io/en/latest/)
 - [NLTK](https://www.nltk.org/)
 - [spaCy](https://spacy.io/)
-- [progressbar](https://progressbar-2.readthedocs.io/en/latest/)
+- [ProgressBar](https://progressbar-2.readthedocs.io/en/latest/)
 
 Make sure to have Python (version 3.x) and the above libraries installed. If not, run the following from a terminal:
 ```
