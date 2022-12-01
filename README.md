@@ -30,7 +30,7 @@ This project was build using the following technologies:
 
 We used the [Goodreads Datasets](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/home) from UCSD. Bellow are the links to the dataset to run the project. Save the dtaset to a directory called **data**.
 
-**Mandatory:**
+#### **Mandatory**
 
 To prevent having to run the data preprocessing step, we have exported our preprocessed data set:
 
@@ -38,7 +38,7 @@ To prevent having to run the data preprocessing step, we have exported our prepr
 
 - List of all user ratings for the book they read [user_book_ratings.csv](https://drive.google.com/file/d/1813UCk3913FR0TgGh3yJqXtOawaW54Gv/view?usp=sharing)
 
-**Optional:**
+#### **Optional**
 
 To run the preprocessing steps, it will require downloading the original dataset.
 Bellow the links to access the original dataset:
@@ -53,7 +53,7 @@ Bellow the links to access the original dataset:
 To run the project, follow the steps bellow after downloading the required dataset and saving it to a directory called **data**.
 
 0. (Optinal) If you have downloaded the optional dataset, then you can run the _DataPreprocessing.ipynb_ file which preprocesses the dataset (make sure the dataset is saved to a directory called data).
-1.
+1. Before running this step, ensure you have a directory nammed _data_ containing _books_metadata.csv_ _user_book_ratings.csv_ (either [download](#mandatory) them directly or by running step 0).
 
 ## Sources
 
