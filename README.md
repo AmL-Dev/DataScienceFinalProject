@@ -53,8 +53,20 @@ Bellow the links to access the original dataset:
 To run the project, follow the steps bellow after downloading the required dataset and saving it to a directory called **data**.
 
 0. (Optinal) If you have downloaded the optional dataset, then you can run the _DataPreprocessing.ipynb_ file which preprocesses the dataset (make sure the dataset is saved to a directory called data).
-1. Before running this step, ensure you have a directory nammed _data_ containing _books_metadata.csv_ _user_book_ratings.csv_ (either [download](#mandatory) them directly or by running step 0).
+1. - Before running this step, ensure that you have a directory nammed _data_ containing _books_metadata.csv_ _user_book_ratings.csv_ (either [download](#mandatory) them directly or by running step 0).
+
+   * Run the _tfidf.ipynb_ file to compute extract the most significant words in books description.
+
+2. - Before running this step, ensure that you have a _tfidf_scores_ file in the current directory.
+
+   * Run the _ItemAndUserProfiles.ipynb_ file to create a store item and user profiles.
+
+3. - Before running this step, ensure that you have an _item_profiles.txt_ and _user_profiles.txt_ file in the current directory.
+   * (Optional) Run the first cell of _Recommendation.ipynb_ to get a random user
+   * (Optional) In the second cell, set the id of the user you want to get recommendation for: _recommendation_user_id_ variable
+   * Run all cells of _Recommendation.ipynb_ to get recommendations for a specific user.
 
 ## Sources
 
-- [Collaborative filtering, GeeksforGeeks](https://www.geeksforgeeks.org/user-based-collaborative-filtering/)
+- Mining of Massive Datasets. Book by Jure Leskovec, Anand Rajaraman and Jeffrey D. Ullman, 2019
+- Content-based recommendation algorithms on the Hadoop MapReduce framework. Paper by T. D. Pessemier, K. Vanhecke, S. Dooms, and L. Martens
